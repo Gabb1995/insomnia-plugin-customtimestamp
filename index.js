@@ -8,7 +8,7 @@ module.exports.templateTags = [{
             displayName: 'Type',
             type: 'enum',
             options: [{
-                displayName: 'Specific future date (eg. 2018/01/01 00:00:00)',
+                displayName: 'Specific date (eg. 2018/01/01 00:00:00)',
                 value: 'specific'
             },
             {
