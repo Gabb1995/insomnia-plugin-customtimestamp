@@ -1,0 +1,32 @@
+{
+  "name": "insomnia-plugin-customtimestamp",
+  "version": "1.0.0",
+  "description": "Create a custom timestamp in insomnia rest client",
+  "main": "index.js",
+  "insomnia": {
+    "name": "customTimestamp",
+    "description": "Create a custom timestamp in insomnia rest client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabb1995/insomnia-plugin-customtimestamp.git"
+  },
+  "keywords": [
+    "insomnia",
+    "plugin",
+    "custom",
+    "timestamp",
+    "date",
+    "time",
+    "datetime"
+  ],
+  "author": "gabb1995",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabb1995/insomnia-plugin-customtimestamp/issues"
+  },
+  "homepage": "https://github.com/Gabb1995/insomnia-plugin-customtimestamp#readme",
+  "dependencies": {
+    "moment": "^2.19.2"
+  }
+}
