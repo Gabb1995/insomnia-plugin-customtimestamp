@@ -73,6 +73,7 @@ module.exports.templateTags = [{
             hide: args => args[8].value !== 'custom'
         },
         {
+            help: 'moment.js locale',
             displayName:'Locale',
             type:'string',
             placeholder: 'en_us',
