@@ -71,11 +71,17 @@ module.exports.templateTags = [{
             type: 'string',
             placeholder: 'MMMM Do YYYY, h:mm:ss a',
             hide: args => args[8].value !== 'custom'
+        },
+        {
+            help: 'moment.js locale',
+            displayName:'Locale',
+            type:'string',
+            placeholder: 'en_us',
+            hide: args => args[8].value !== 'custom'
         }
     ],
-    async run(context, type = 'specific', years = false, months = false, days = false, hours = false, minutes = false, seconds = false, milliseconds = false, dateType = 'iso-8601', formatStr = '') {
+    async run(context, type = 'specific', years = false, months = false, days = false, hours = false, minutes = false, seconds = false, milliseconds = false, dateType = 'iso-8601', formatStr = '', locale = '') {
         var customDate = new Date();
-
         switch (type) {
             case 'specific':
                 if (milliseconds) {
@@ -140,6 +146,9 @@ module.exports.templateTags = [{
             case 'iso-8601':
                 return customDate.toISOString();
             case 'custom':
+                if (locale){
+                    moment.locale(locale)
+                }
                 return moment(customDate).format(formatStr);
             default:
                 throw new Error(`Invalid date type "${dateType}"`);
