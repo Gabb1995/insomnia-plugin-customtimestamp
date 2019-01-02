@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/Gabb1995/insomnia-plugin-customtimestamp#readme",
   "dependencies": {
-    "moment": "^2.19.2"
+    "moment": "^2.23.0"
   }
 }
